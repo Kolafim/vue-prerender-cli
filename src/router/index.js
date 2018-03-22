@@ -9,7 +9,7 @@ let About = {template:'<div><h2>About Page</h2></div>'}
 let Contact = {template:'<div><h2>Contact Page</h2></div>'}
 
 export default new Router({
-  base: process.env.NODE_ENV === 'production'?'https://kolafim.github.io/vue-prerender-cli/':'/',
+  base: process.env.NODE_ENV === 'production'?'/vue-prerender-cli/dist/':'/',
   mode: 'history',
   routes: [
     { path: '/', component: Home },

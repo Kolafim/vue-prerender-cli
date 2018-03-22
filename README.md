@@ -1,6 +1,6 @@
-# web-project
+# vue-prerender-cli
 
-> A Vue.js project
+> [index.html](https://kolafim.github.io/vue-prerender-cli/dist)
 
 ## Build Setup
 
