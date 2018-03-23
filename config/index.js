@@ -3,8 +3,10 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+const _env = process.env.NODE_ENV === 'development'?require('./dev.env'):(process.env.NODE_ENV === 'testing'? require('./test.env'):require('./prod.env'))
 
 module.exports = {
+  env: _env,
   dev: {
 
     // Paths
@@ -50,7 +52,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: process.env.NODE_BASE_URL || './',
+    assetsPublicPath: _env.NODE_BASE_URL.replace(/^['"]+([a-zA-Z\-/]+)['"]$/g,"$1") || './',
 
     /**
      * Source Maps
