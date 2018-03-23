@@ -4,7 +4,7 @@
     <h1>{{ msg }}</h1>
     <p>
       <router-link to="/">Home</router-link>
-      <router-link to="about">About1</router-link>
+      <router-link to="/about">About2</router-link>
       <router-link to="contact">Contact</router-link>
     </p>
     <router-view/>
