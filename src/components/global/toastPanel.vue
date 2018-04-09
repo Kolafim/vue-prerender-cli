@@ -1,0 +1,66 @@
+<template>
+  <div class="toast" >
+    <button @click="show">show toast</button>
+    <!-- <transition
+      name="custom-classes-transition"
+      enter-active-class="animated short ease-out opacity-on"
+      leave-active-class="animated short ease-out opacity-off"
+    >
+      <div v-if="!modal.toast.hide" class="panel-bg"></div>
+    </transition> -->
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animated short ease-out zoomIn"
+      leave-active-class="animated short ease-out zoomOut"
+    >
+      <div v-if="modal.toast && !modal.toast.hide" class="toast-panel">
+        <div class="h100 flex flex-line" @click.self="close">
+          <div class="toast-main" >
+            <div>{{ modal.toast.msg }}</div>
+            <div><button @click="close">关闭</button></div>
+          </div>
+        </div>
+      </div>
+    </transition>
+
+  </div>
+</template>
+
+<script>
+  import {mapState} from 'vuex'
+  export default {
+    created(){
+      // console.log(this.modal)
+    },
+    methods:{
+      show(){
+        // console.log(this.modal.toast);
+        this.$store.commit('TOAST_SHOW',{msg:'ggggg'})
+      },
+      close(){
+        // console.log(e);
+        this.$store.commit('TOAST_HIDE');
+      }
+    },
+    computed:mapState(['modal'])
+  }
+</script>
+
+<style lang="scss" scoped>
+  @import '../../assets/css/_setting.scss';
+
+  .toast-panel{
+    position:fixed;
+    left:0;
+    top:0;
+    z-index: 1002;
+    width:100%;
+    height:100%;
+
+    .toast-main{
+      padding:10%;
+      background-color: #fff;
+      border:1px solid $gray;
+    }
+  }
+</style>

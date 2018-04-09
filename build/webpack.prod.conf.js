@@ -123,7 +123,6 @@ const webpackConfig = merge(baseWebpackConfig, {
     ]),
     new PrerenderSpaPlugin(
       path.resolve(__dirname, '../dist'),
-      // [ '/vue-prerender-cli/dist', '/vue-prerender-cli/dist/about', '/vue-prerender-cli/dist/contact'],
       [ '/', '/about', '/contact' ],
       {
         // options

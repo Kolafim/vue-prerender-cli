@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import MetaInfo from 'vue-meta-info'
-import Home from '@/components/home'
-import About from '@/components/about'
-import Contact from '@/components/contact'
+import Home from '@/pages/home'
+import About from '@/pages/about'
+import Contact from '@/pages/contact'
 
 Vue.use(Router)
 // Vue.use(MetaInfo)
@@ -11,10 +11,6 @@ Vue.use(Router)
 console.log(process.env);
 
 const BASE_TITLE = document.title;
-
-// let Home = {template:'<div><h2>Home Page</h2></div>'}
-// let About = {template:'<div><h2>About Page</h2></div>'}
-// let Contact = {template:'<div><h2>Contact Page</h2></div>'}
 
 const router = new Router({
   base: process.env.NODE_BASE_URL || '/',

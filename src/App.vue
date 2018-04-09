@@ -8,47 +8,53 @@
       <router-link to="/contact">Contact</router-link>
     </p>
     <router-view/>
+    <modal-panel/>
+    <toast-panel/>
   </div>
 </template>
 
 <script>
+import toastPanel from './components/global/toastPanel'
+import modalPanel from './components/global/modalPanel'
 export default {
   name: 'App',
   data () {
     return {
       msg: 'Welcome to your prerender-spa-plugin Vuejs 2.0 demo app!'
     }
+  },
+  components:{
+    toastPanel,
+    modalPanel
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import './assets/css/common.css';
+@import './assets/css/animate.css';
+@import './assets/css/_setting.scss';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $theme-text-1;
   margin-top: 60px;
-}
-.gray {
-  color:#aaa
-}
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+  a {
+    color: $theme-light;
+  }
+  button {
+    background-color: transparent;
+    color:$theme-light;
+    border:1px solid;
+    line-height: 1.8em;
+    padding:0 1em;
+    border-radius: .2em;
+  }
+  button:active {
+    color:$theme-dark;
+  }
 }
 </style>
