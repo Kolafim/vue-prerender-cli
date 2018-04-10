@@ -60,7 +60,7 @@ export default {
       .icon-item{
         display: block;
         width:21%;
-        min-width:200px;
+        min-width:300px;
         margin:10px 0;
 
         i{
