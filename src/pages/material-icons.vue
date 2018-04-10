@@ -15,16 +15,10 @@
 <script>
 import icons from './../assets/js/material-icons.map'
 export default {
-  name: 'home',
   data () {
     return {
-      msg: 'Material Icons',
-      data:[]
+      msg: 'Material Icons'
     }
-  },
-  created(){
-    console.log('created');
-    // console.log(icons);
   },
   computed:{
     icons_map(){
