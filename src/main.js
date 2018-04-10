@@ -15,6 +15,12 @@ import 'muse-ui/dist/muse-ui.css'
 import 'muse-ui/dist/theme-teal.css'
 Vue.use(MuseUI)
 
+/**
+ * material-design-icons
+ * list:https://materialdesignicons.com/
+ */
+import 'material-design-icons/iconfont/material-icons.css';
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

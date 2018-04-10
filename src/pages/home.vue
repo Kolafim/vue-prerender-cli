@@ -6,6 +6,7 @@
     <div><button @click="addCount">+10</button></div>
     <h4>local: {{count}}</h4>
     <div><button @click="addCountLocal">+10</button></div>
+    <i class="material-icons">face</i>
   </div>
 </template>
 

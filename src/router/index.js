@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Home from '@/pages/home'
 import About from '@/pages/about'
 import Contact from '@/pages/contact'
+import materialIcons from '@/pages/material-icons'
 
 Vue.use(Router)
 // Vue.use(MetaInfo)
@@ -32,6 +33,12 @@ const router = new Router({
       name:'contact',
       component: Contact,
       meta:{title:'Contact'}
+    },
+    {
+      path:'/material-icons',
+      name:'Material Icons',
+      component: materialIcons,
+      meta:{title:'Material Icons'}
     }
   ]
 })
