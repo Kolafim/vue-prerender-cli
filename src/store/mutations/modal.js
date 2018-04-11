@@ -13,29 +13,48 @@ export default {
       if(msg == '') msg = 'Error'
     }
     state.toast = {
-      hide:false,
+      show:true,
       type,
       msg,
       theme
     }
   },
   [types.TOAST_HIDE](state) {
-    state.toast.hide = true
+    state.toast.show = false
   },
-  [types.MODAL_SHOW](state, {title='',msg='',theme=0,bg=1}={}) {
+  [types.LOADING_SHOW](state, {type='loading',msg='',theme=0}={}) {
+    this.commit('TOAST_SHOW',{type,msg,theme});
+  },
+  [types.MODAL_SHOW](state, {title='',msg='',theme=0}={}) {
     if(msg == '') {
       console.log('MODAL_SHOW msg为空');
       return;
     }
     state.modal = {
-      hide:false,
+      show:true,
       title,
       msg,
       theme,
-      bg
+      type:1
     }
   },
   [types.MODAL_HIDE](state) {
-    state.modal.hide = true
+    state.modal.show = false
+  },
+  [types.ALERT_SHOW](state, {title='',msg='',theme=0}={}) {
+    if(msg == '') {
+      console.log('ALERT_SHOW msg为空');
+      return;
+    }
+    state.modal = {
+      show:true,
+      title,
+      msg,
+      theme,
+      type:0
+    }
+  },
+  [types.ALERT_HIDE](state) {
+    state.modal.show = false
   }
 }

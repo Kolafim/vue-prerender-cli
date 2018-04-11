@@ -3,17 +3,20 @@ import modalMutations from '../mutations/modal.js'
 export default {
   state: {
     toast:{
-      hide:true,
+      show:false,
       type:0,         // text  loading  err
       msg:'',
       theme:0
     },
     modal:{
-      hide:true,
+      show:false,
       title:'',
       msg:'',
       theme:0,
-      bg:1            // 是否显示背景
+    },
+    top:{
+      show:false,
+      msg:''
     }
   },
   mutations: modalMutations

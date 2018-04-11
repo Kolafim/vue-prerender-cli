@@ -1,23 +1,27 @@
 <template>
   <div class="toast" >
-    <button @click="show">show toast</button>
+    <!-- <button @click="show">show toast</button> -->
     <!-- <transition
       name="custom-classes-transition"
       enter-active-class="animated short ease-out opacity-on"
       leave-active-class="animated short ease-out opacity-off"
     >
-      <div v-if="!modal.toast.hide" class="panel-bg"></div>
+      <div v-if="modal.toast.show" class="panel-bg"></div>
     </transition> -->
     <transition
       name="custom-classes-transition"
       enter-active-class="animated short ease-out zoomIn"
       leave-active-class="animated short ease-out zoomOut"
     >
-      <div v-if="modal.toast && !modal.toast.hide" class="toast-panel">
+      <div v-if="modal.toast && modal.toast.show" class="toast-panel">
         <div class="h100 flex flex-line" @click.self="close">
           <div class="toast-main" >
-            <div>{{ modal.toast.msg }}</div>
-            <div><button @click="close">关闭</button></div>
+            <div class="toast-icon">
+              <mu-circular-progress v-if="modal.toast.type=='loading'" :size="50" color="#fff" />
+              <i v-if="modal.toast.type=='err'" class="material-icons">&#xe001;</i>
+            </div>
+            <p class="toast-text">{{ modal.toast.msg }}</p>
+            <!-- <div><button @click="close">关闭</button></div> -->
           </div>
         </div>
       </div>
@@ -34,20 +38,19 @@
     },
     methods:{
       show(){
-        // console.log(this.modal.toast);
-        this.$store.commit('TOAST_SHOW',{msg:'ggggg'})
+        this.$store.commit('LOADING_SHOW')
+        // this.$store.commit('TOAST_SHOW',{msg:'ggggg',type:'loading'})
       },
       close(){
-        // console.log(e);
         this.$store.commit('TOAST_HIDE');
-      }
+      },
     },
     computed:mapState(['modal'])
   }
 </script>
 
 <style lang="scss" scoped>
-  @import '../../assets/css/_setting.scss';
+  // @import '../../assets/css/theme.scss';
 
   .toast-panel{
     position:fixed;
@@ -58,9 +61,28 @@
     height:100%;
 
     .toast-main{
-      padding:10%;
-      background-color: #fff;
-      border:1px solid $gray;
+      padding: 40px 20px;
+      padding: 5vw 20px;
+      background-color: #344c456b;
+      border-radius: 14px;
+      max-width: 50%;
+
+      .toast-icon {
+        margin-bottom: 10px;
+
+        i {
+          display: block;
+          font-size:60px;
+          color:#fff;
+          font-weight: 200;
+        }
+      }
+      .toast-text{
+        min-width:120px;
+        max-width: 180px;
+        color:#fff;
+        font-size: 16px;
+      }
     }
   }
 </style>

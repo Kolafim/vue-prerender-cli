@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/images/logo.png">
     <h1 class="gray">{{ msg }}</h1>
     <p>
       <router-link to="/">Home</router-link>
@@ -34,7 +34,7 @@ export default {
 <style lang="scss">
 @import './assets/css/common.css';
 @import './assets/css/animate.css';
-@import './assets/css/_setting.scss';
+@import './assets/css/theme.scss';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -45,17 +45,6 @@ export default {
   margin-top: 60px;
   a {
     color: $theme-light;
-  }
-  button {
-    background-color: transparent;
-    color:$theme-light;
-    border:1px solid;
-    line-height: 1.8em;
-    padding:0 1em;
-    border-radius: .2em;
-  }
-  button:active {
-    color:$theme-dark;
   }
 }
 </style>

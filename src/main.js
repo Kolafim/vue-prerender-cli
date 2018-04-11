@@ -12,13 +12,10 @@ import store from './store'
 /* muse */
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
-import 'muse-ui/dist/theme-teal.css'
+import 'muse-ui/dist/theme-teal.css'// 使用 teal 主题, 预设4种主题：light, dark, carbon, teal
 Vue.use(MuseUI)
 
-/**
- * material-design-icons
- * list:https://materialdesignicons.com/
- */
+/* material-design-icons */
 import 'material-design-icons/iconfont/material-icons.css';
 
 /* eslint-disable no-new */
