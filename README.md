@@ -1,8 +1,16 @@
 # vue-prerender-cli
 
-> [index.html](https://kolafim.github.io/vue-prerender-cli/dist)
+> [Read index.html](https://kolafim.github.io/vue-prerender-cli/dist)
 
-## Build Setup
+#### 分支说明
+
+branch | packages
+---|---
+muse-ui | vue / prerender-spa-plugin / vue-router / vuex / sass / muse-ui / material-design-icons
+vuex&sass | vue / prerender-spa-plugin / vue-router / vuex / sass
+basic | vue / prerender-spa-plugin / vue-router
+
+#### Build Setup
 
 ``` bash
 # install dependencies

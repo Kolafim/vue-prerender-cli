@@ -2,14 +2,12 @@
   <div class="toast" >
     <!-- <button @click="show">show toast</button> -->
     <!-- <transition
-      name="custom-classes-transition"
       enter-active-class="animated short ease-out opacity-on"
       leave-active-class="animated short ease-out opacity-off"
     >
       <div v-if="modal.toast.show" class="panel-bg"></div>
     </transition> -->
     <transition
-      name="custom-classes-transition"
       enter-active-class="animated short ease-out zoomIn"
       leave-active-class="animated short ease-out zoomOut"
     >
@@ -63,7 +61,7 @@
     .toast-main{
       padding: 40px 20px;
       padding: 5vw 20px;
-      background-color: #344c456b;
+      background-color: #344c458a;
       border-radius: 14px;
       max-width: 50%;
 

@@ -19,7 +19,7 @@
       <mu-raised-button label="show modal" @click="openModal" />
       <mu-raised-button label="show toast" @click="openToast" />
     </div>
-    <mu-popup position="top" :overlay="false" popupClass="demo-popup-top" :open="topPopup">
+    <mu-popup position="top" :overlay="false" popupClass="msg-popup-top" :open="topPopup">
       顶部消息
     </mu-popup>
   </div>

@@ -10,6 +10,8 @@ pre, .pre { white-space: pre-wrap;}
 input, textarea, keygen, select, button {font-family: inherit;font-size: inherit;outline:none;}
 h1,h2,h3,h4,h5 {font-weight: 400}
 
+.fantasy {font-family: fantasy,-apple-system-font,"Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;}
+
 .middle {vertical-align: middle;}
 .bottom {vertical-align: bottom;}
 .top {vertical-align: top;}

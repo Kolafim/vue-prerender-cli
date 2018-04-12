@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/images/logo.png">
+    <!-- <img src="./assets/images/logo.png"> -->
     <h1 class="gray">{{ msg }}</h1>
     <p>
       <router-link to="/">Home</router-link>
@@ -8,6 +8,7 @@
       <router-link to="/contact">Contact</router-link>
       <router-link to="/material-icons">Material Icons</router-link>
     </p>
+    <main-menu />
     <router-view/>
     <modal-panel/>
     <toast-panel/>
@@ -15,16 +16,17 @@
 </template>
 
 <script>
+import mainMenu from './components/global/mainMenu'
 import toastPanel from './components/global/toastPanel'
 import modalPanel from './components/global/modalPanel'
 export default {
-  name: 'App',
   data () {
     return {
       msg: 'Welcome to your prerender-spa-plugin Vuejs 2.0 demo app!'
     }
   },
   components:{
+    mainMenu,
     toastPanel,
     modalPanel
   }
@@ -47,4 +49,10 @@ export default {
     color: $theme-light;
   }
 }
+
+// @media (min-width: 1440px) {
+//   body{
+//     overflow-y: scroll !important;
+//   }
+// }
 </style>

@@ -61,34 +61,34 @@
 
 @-webkit-keyframes opacity-on {
   from {
-    opacity: 0
+    opacity: 0;
   }
   100% {
-    opacity: 1
+    opacity: 1;
   }
 }
 @keyframes opacity-on {
   from {
-    opacity: 0
+    opacity: 0;
   }
   100% {
-    opacity: 1
+    opacity: 1;
   }
 }
 @-webkit-keyframes opacity-off {
   from {
-    opacity: 1
+    opacity: 1;
   }
   100% {
-    opacity: 0
+    opacity: 0;
   }
 }
 @keyframes opacity-off {
   from {
-    opacity: 1
+    opacity: 1;
   }
   100% {
-    opacity: 0
+    opacity: 0;
   }
 }
 
@@ -126,6 +126,11 @@
   animation-duration: .3s;
 }
 
+.animated.delay {
+  -webkit-animation-delay:.3s;
+  animation-delay:.3s;
+}
+
 .rotate {
   -webkit-animation:rotate 2s linear infinite;
   animation:rotate 2s linear infinite;
@@ -150,6 +155,15 @@
   -webkit-animation-name: opacity-off;
   animation-name: opacity-off;
 }
+
+.list-opacity-enter-active, .opacity-enter-active, .opacity-leave-active {
+  transition: opacity .3s ease-out;
+}
+.list-opacity-enter, .list-opacity-leave-to, .opacity-enter, .opacity-leave-to {
+  opacity: 0;
+}
+
+.opacity0 {opacity:0}
 
 @keyframes weuiLoading{0%{-webkit-transform:rotate3d(0,0,1,0deg)}100%{-webkit-transform:rotate3d(0,0,1,360deg)}}
 .weui-loading {
