@@ -60,7 +60,7 @@
 
     .toast-main{
       padding: 40px 20px;
-      padding: 5vw 20px;
+      // padding: 5vw 20px;
       background-color: #344c458a;
       border-radius: 14px;
       max-width: 50%;
