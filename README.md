@@ -6,8 +6,9 @@
 
 branch | packages
 ---|---
-master | vue / [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin) / vue-router / vuex / sass / muse-ui / material-design-icons
-vuex&sass | vue / [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin) / vue-router / vuex / sass
+master | 基于`muse` / [mavonEditor](https://github.com/hinesboy/mavonEditor)
+muse | 基于`vuex&sass` / muse-ui / material-design-icons
+vuex&sass | 基于`basic` / vuex / sass
 basic | vue / [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin) / vue-router
 
 #### Build Setup
