@@ -25,19 +25,19 @@ export default {
           return false;
         },
         hljs_js: function() {
-          return '../highlightjs/highlight.min.js';
+          return process.env.NODE_BASE_URL+'static/highlightjs/highlight.min.js';
         },
         hljs_css: function(css) {
-          return '../highlightjs/styles/' + css + '.min.css';
+          return process.env.NODE_BASE_URL+'static/highlightjs/styles/' + css + '.min.css';
         },
         hljs_lang: function(lang) {
-          return '../highlightjs/languages/' + lang + '.min.js';
+          return process.env.NODE_BASE_URL+'static/highlightjs/languages/' + lang + '.min.js';
         },
         katex_css: function() {
-          return '../katex/katex.min.css';
+          return process.env.NODE_BASE_URL+'static/katex/katex.min.css';
         },
         katex_js: function() {
-          return '../katex/katex.min.js';
+          return process.env.NODE_BASE_URL+'static/katex/katex.min.js';
         },
       }
     }
@@ -55,6 +55,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../assets/css/github-markdown.min.css";
   .markdown-editor{
     height:100%;
     background-color: #f1f1f1;

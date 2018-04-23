@@ -25,14 +25,8 @@ export default {
       msg: 'Welcome to your prerender-spa-plugin Vuejs 2.0 demo app!'
     }
   },
-  created (){
-    console.log(this.$route);
-  },
   computeds:{
-    router_test(){
-      console.log(this.$router);
-      return typeof this.$router;
-    }
+    
   },
   components:{
     mainMenu,
