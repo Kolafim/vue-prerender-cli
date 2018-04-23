@@ -21,7 +21,8 @@ export default {
       value:'',
       externalLink: {
         markdown_css: function() {
-          return '../css/github-markdown.min.css';
+          //return '../css/github-markdown.min.css';
+          return false;
         },
         hljs_js: function() {
           return '../highlightjs/highlight.min.js';
