@@ -1,7 +1,7 @@
 
 <template>
   <div class="hello">
-    <h2>{{ msg }}</h2>
+    <h2 class="page-head-name">{{ msg }}</h2>
     <div class="flex">
       <div>
         <h4>store: {{common.count}} / {{animat_store_count}}</h4>

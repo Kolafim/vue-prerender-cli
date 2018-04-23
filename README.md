@@ -6,7 +6,7 @@
 
 branch | packages
 ---|---
-master | 基于`muse` / [mavonEditor](https://github.com/hinesboy/mavonEditor)
+master | 基于`muse` / [mavonEditor](https://github.com/hinesboy/mavonEditor?_blank)
 muse | 基于`vuex&sass` / muse-ui / material-design-icons
 vuex&sass | 基于`basic` / vuex / sass
 basic | vue / [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin) / vue-router

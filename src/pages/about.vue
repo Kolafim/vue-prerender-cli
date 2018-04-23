@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h2>{{ msg }}</h2>
+    <h2 class="page-head-name">{{ msg }}</h2>
   </div>
 </template>
 

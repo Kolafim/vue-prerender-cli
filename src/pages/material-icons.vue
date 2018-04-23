@@ -1,6 +1,6 @@
 <template>
   <div class="material-icon">
-    <h2>{{ msg }}</h2>
+    <h2 class="page-head-name">{{ msg }}</h2>
     <p class="des">编码方式兼容更好:<span class="light">&#x[code];</span></p>
     <ul class="icon-list flex">
       <li v-for="icon in icons_map" class="icon-item">
@@ -41,9 +41,7 @@ export default {
 
 <style lang="scss" scoped>
   .material-icon{
-    h2{
-      margin:30px 0;
-    }
+    
     .des {
       color:#999;
 

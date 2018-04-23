@@ -23,6 +23,7 @@
                 <mu-list-item v-if="item_show" key="m2" data-index="2" title="Contact" :to="{name:'contact'}" @click.native="close"/>
                 <mu-divider v-if="item_show" key="m3" data-index="3" />
                 <mu-list-item v-if="item_show" key="m4" data-index="4" title="Material Icons" :to="{name:'Material Icons'}" @click.native="close"/>
+                <mu-list-item v-if="item_show" key="m5" data-index="5" title="Markdown Editor" :to="{name:'Markdown Editor'}" @click.native="close"/>
               </transition-group>
 
             </mu-list>
@@ -89,7 +90,7 @@
       left:0;
       width:100%;
       height:100%;
-      z-index: 0;
+      z-index: 1000;
       background-color: rgba(0,0,0,.15)
     }
 
@@ -98,7 +99,7 @@
       position: fixed;
       right: 7%;
       top: 10px;
-      z-index: 2;
+      z-index: 1002;
       padding: 5px;
       width: 40px;
       height: 40px;
@@ -134,7 +135,7 @@
   }
   .main-menu-panel{
     width:100%;
-    z-index: 1 !important;
+    z-index: 1001 !important;
 
     .m-m-cell {
       margin:auto;
