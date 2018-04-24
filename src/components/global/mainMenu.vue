@@ -151,8 +151,6 @@
         -webkit-box-pack: start;
         -ms-flex-pack: start;
         justify-content: flex-start;
-        margin-left: -15px;
-        margin-right: -15px;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -196,7 +194,6 @@
               .mu-item-title {
                 font-size: 14px;
                 color:#222;
-
               }
 
               &.router-link-active .mu-item-title {
@@ -209,7 +206,24 @@
       }
     }
 
+    @media (min-width: 480px){
+      .m-m-cell {
+        max-width: 1350px;
+      }
 
+    }
+    @media (min-width: 720px){
+      .m-m-cell {
+        padding-left: 50px;
+        padding-right: 50px;
+        max-width: 1390px;
+
+        .m-m-flex {
+          margin-left: -15px;
+          margin-right: -15px;
+        }
+      }
+    }
     @media (min-width: 1080px){
       .m-m-cell {
         padding-left: 70px;
@@ -217,18 +231,7 @@
         max-width: 1430px;
       }
     }
-    @media (min-width: 720px){
-      .m-m-cell {
-        padding-left: 50px;
-        padding-right: 50px;
-        max-width: 1390px;
-      }
-    }
-    @media (min-width: 480px){
-      .m-m-cell {
-        max-width: 1350px;
-      }
-    }
+
   }
 
 

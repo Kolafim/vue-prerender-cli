@@ -123,7 +123,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     ]),
     new PrerenderSpaPlugin(
       path.resolve(__dirname, '../dist'),
-      [ '/', '/about', '/contact' ],
+      [ '/', '/about', '/contact', '/material-icons'],
       {
         // options
       }
