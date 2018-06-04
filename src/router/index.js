@@ -6,6 +6,7 @@ import About from '@/pages/about'
 import Contact from '@/pages/contact'
 import materialIcons from '@/pages/material-icons'
 import markdownEditor from '@/pages/markdown-editor'
+import markdownView from '@/pages/markdown-view'
 
 Vue.use(Router)
 // Vue.use(MetaInfo)
@@ -46,6 +47,12 @@ const router = new Router({
       name:'Markdown Editor',
       component: markdownEditor,
       meta:{title:'Markdown Editor',screen:1}
+    },
+    {
+      path:'/markdown-view/:name',
+      name:'Markdown View',
+      component: markdownView,
+      meta:{title:'Markdown View'}
     }
   ]
 })

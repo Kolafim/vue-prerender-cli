@@ -1,7 +1,17 @@
 <template>
   <div class="markdown-editor flex flex-v">
     <h2 class="page-head-name">{{ msg }}</h2>
-    <mavon-editor v-model="value" :ishljs="true" :externalLink="externalLink"/>
+    <a href="markdown-view/emoji_list_CN">emoji list</a>
+    <!-- <mavon-editor v-model="value" :ishljs="true" :externalLink="externalLink"/> -->
+    <!-- @childevent="childEventHandler" -->
+    <markdown
+    :value="md_value"
+    :fullPageStatusP="false"
+    :editStatusP="true"
+    :previewStatusP="true"
+    :navStatusP="true"
+    :icoStatusP="true"
+    ></markdown>
     <div class="m-e-footer">
       <p><i class="material-icons">&#xe86b;</i><span>description</span></p>
     </div>
@@ -9,16 +19,14 @@
 </template>
 
 <script>
-/* mavonEditor */
-let mavonEditor = require('mavon-editor')
-// import mavonEditor from 'mavon-editor'
-import 'mavon-editor/dist/css/index.css'
+import markdown from '../components/markdown'
 
 export default {
   data () {
     return {
       msg: 'Markdown Editor',
       value:'',
+      md_value:'```javascript\nfunction aaa(){}\n```\n',
       externalLink: {
         markdown_css: function() {
           //return '../css/github-markdown.min.css';
@@ -43,19 +51,18 @@ export default {
     }
   },
   created(){
-    console.log(mavonEditor);//mavonEditor.mixins[0].data().s_markdown
+    // console.log(mavonEditor);
   },
   computed:{
 
   },
   components:{
-    'mavon-editor':mavonEditor.mavonEditor
+    markdown
   }
 }
 </script>
 
 <style lang="scss">
-  @import "../assets/css/github-markdown.min.css";
   .markdown-editor{
     height:100%;
     background-color: #f1f1f1;
